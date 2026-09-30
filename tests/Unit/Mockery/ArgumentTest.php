@@ -115,7 +115,7 @@ final class ArgumentTest extends AbstractTestCase
         self::assertInstanceOf(HasValue::class, Argument::hasValue('foo'));
         self::assertInstanceOf(IsEqual::class, Argument::isEqual('foo'));
         self::assertInstanceOf(IsSame::class, Argument::isSame('foo'));
-        self::assertInstanceOf(MustBe::class, Argument::mustBe('foo'));
+        self::assertInstanceOf(MustBe::class, @Argument::mustBe('foo'));
         self::assertInstanceOf(Not::class, Argument::not('foo'));
         self::assertInstanceOf(NotAnyOf::class, Argument::notAnyOf('foo', 'bar'));
         self::assertInstanceOf(Pattern::class, Argument::pattern('#foo#'));
